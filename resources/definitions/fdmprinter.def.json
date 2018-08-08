@@ -6071,6 +6071,20 @@
                     "settable_per_mesh": false,
                     "settable_per_extruder": true
                 },
+                "cross_infill_dithering_density":
+                {
+                    "label": "Cross Infill Dithering Density",
+                    "description": "The density of the infill obtained through interweaving cells of the given Infill Line Distance and larger cells.",
+                    "unit": "%",
+                    "type": "float",
+                    "default_value": 100,
+                    "value": "100",
+                    "minimum_value": "0",
+                    "maximum_value_warning": "100 * infill_line_width / infill_line_distance",
+                    "enabled": "(infill_pattern == 'cross' or infill_pattern == 'cross_3d') and (cross_infill_density_image.isspace() or cross_infill_density_image == '')",
+                    "limit_to_extruder": "infill_extruder_nr",
+                    "settable_per_mesh": true
+                },
                 "spaghetti_infill_enabled":
                 {
                     "label": "Spaghetti Infill",
