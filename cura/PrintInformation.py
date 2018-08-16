@@ -306,7 +306,7 @@ class PrintInformation(QObject):
         # Only update the job name when it's not user-specified.
         if not self._is_user_specified_job_name:
             if self._pre_sliced:
-                self._job_name = catalog.i18nc("@label", "Pre-sliced file {0}", base_name)
+                self._job_name = catalog.i18nc("@label", "{0}", base_name)
             elif self._application.getInstance().getPreferences().getValue("cura/jobname_prefix"):
                 # Don't add abbreviation if it already has the exact same abbreviation.
                 if base_name.startswith(self._abbr_machine + "_"):
