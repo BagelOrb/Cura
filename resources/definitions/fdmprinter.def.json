@@ -6050,6 +6050,29 @@
                     "limit_to_extruder": "infill_extruder_nr",
                     "settable_per_mesh": true
                 },
+                "cross_infill_support_top":
+                {
+                    "label": "Cross 3D Dense at Top",
+                    "description": "Force the infill structure to be most dense near top surfaces. This overrides any other density specification so as to support top surfaces. The density near top surfaces is determined by the Infill Density setting.",
+                    "type": "bool",
+                    "default_value": false,
+                    "enabled": "infill_pattern == 'cross_3d'",
+                    "limit_to_extruder": "infill_extruder_nr",
+                    "settable_per_mesh": true
+                },
+                "cross_infill_top_density":
+                {
+                    "label": "Cross Infill Top Density",
+                    "description": "The density to enforce near top surfaces.",
+                    "unit": "%",
+                    "type": "float",
+                    "default_value": 35,
+                    "minimum_value": "0",
+                    "maximum_value_warning": "100",
+                    "enabled": "(infill_pattern == 'cross' or infill_pattern == 'cross_3d') and cross_infill_support_top",
+                    "limit_to_extruder": "infill_extruder_nr",
+                    "settable_per_mesh": true
+                },
                 "cross_infill_density_image":
                 {
                     "label": "Cross Infill Density Image",
