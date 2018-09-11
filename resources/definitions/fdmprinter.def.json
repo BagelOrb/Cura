@@ -6060,6 +6060,46 @@
                     "limit_to_extruder": "infill_extruder_nr",
                     "settable_per_mesh": true
                 },
+                "cross_infill_image_density_min":
+                {
+                    "label": "Cross Infill Black Density",
+                    "description": "The minimum density corresponding to an extremal brightness in the Density Image. Purely black pixels translate to this density.",
+                    "unit": "%",
+                    "type": "float",
+                    "default_value": 80,
+                    "value": "100 * (1 / 3 + 1 / 3 * math.sqrt(2)) * infill_line_width / infill_line_distance",
+                    "minimum_value": "0",
+                    "maximum_value_warning": "100",
+                    "enabled": "(infill_pattern == 'cross' or infill_pattern == 'cross_3d') and not(cross_infill_density_image.isspace() or cross_infill_density_image == '')",
+                    "limit_to_extruder": "infill_extruder_nr",
+                    "settable_per_mesh": true
+                },
+                "cross_infill_image_density_max":
+                {
+                    "label": "Cross Infill White Density",
+                    "description": "The maximum density corresponding to an extremal brightness in the Density Image. Purely white pixels translate to this density.",
+                    "unit": "%",
+                    "type": "float",
+                    "default_value": 0,
+                    "minimum_value": "0",
+                    "maximum_value_warning": "100",
+                    "enabled": "(infill_pattern == 'cross' or infill_pattern == 'cross_3d') and not(cross_infill_density_image.isspace() or cross_infill_density_image == '')",
+                    "limit_to_extruder": "infill_extruder_nr",
+                    "settable_per_mesh": true
+                },
+                "cross_infill_image_density_transparent":
+                {
+                    "label": "Cross Infill Transparency Density",
+                    "description": "The density corresponding to transparent pixels in the Density Image.",
+                    "unit": "%",
+                    "type": "float",
+                    "default_value": 28,
+                    "minimum_value": "0",
+                    "maximum_value_warning": "100",
+                    "enabled": "(infill_pattern == 'cross' or infill_pattern == 'cross_3d') and not(cross_infill_density_image.isspace() or cross_infill_density_image == '')",
+                    "limit_to_extruder": "infill_extruder_nr",
+                    "settable_per_mesh": true
+                },
                 "cross_support_density_image":
                 {
                     "label": "Cross Fill Density Image for Support",
@@ -6070,6 +6110,46 @@
                     "limit_to_extruder": "support_infill_extruder_nr",
                     "settable_per_mesh": false,
                     "settable_per_extruder": true
+                },
+                "cross_support_image_density_min":
+                {
+                    "label": "Cross Fill Black Density for Support",
+                    "description": "The minimum density corresponding to an extremal brightness in the Density Image for Support. Purely black pixels translate to this density.",
+                    "unit": "%",
+                    "type": "float",
+                    "default_value": 80,
+                    "value": "100 * (1 / 3 + 1 / 3 * math.sqrt(2)) * infill_line_width / infill_line_distance",
+                    "minimum_value": "0",
+                    "maximum_value_warning": "100",
+                    "enabled": "(support_pattern == 'cross' or support_pattern == 'cross_3d') and not(cross_support_density_image.isspace() or cross_support_density_image == '')",
+                    "limit_to_extruder": "support_infill_extruder_nr",
+                    "settable_per_mesh": true
+                },
+                "cross_support_image_density_max":
+                {
+                    "label": "Cross Fill White Density for Support",
+                    "description": "The maximum density corresponding to an extremal brightness in the Density Image for Support. Purely white pixels translate to this density.",
+                    "unit": "%",
+                    "type": "float",
+                    "default_value": 0,
+                    "minimum_value": "0",
+                    "maximum_value_warning": "100",
+                    "enabled": "(support_pattern == 'cross' or support_pattern == 'cross_3d') and not(cross_support_density_image.isspace() or cross_support_density_image == '')",
+                    "limit_to_extruder": "support_infill_extruder_nr",
+                    "settable_per_mesh": true
+                },
+                "cross_support_image_density_transparent":
+                {
+                    "label": "Cross Fill Transparency Density for Support",
+                    "description": "The density corresponding to transparent pixels in the Density Image for Support.",
+                    "unit": "%",
+                    "type": "float",
+                    "default_value": 28,
+                    "minimum_value": "0",
+                    "maximum_value_warning": "100",
+                    "enabled": "(support_pattern == 'cross' or support_pattern == 'cross_3d') and not(cross_support_density_image.isspace() or cross_support_density_image == '')",
+                    "limit_to_extruder": "support_infill_extruder_nr",
+                    "settable_per_mesh": true
                 },
                 "cross_infill_dithering_density":
                 {
