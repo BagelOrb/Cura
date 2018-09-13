@@ -6076,7 +6076,7 @@
                 "cross_infill_density_image":
                 {
                     "label": "Cross Infill Density Image",
-                    "description": "The file location of an image of which the brightness values determine the minimal density at the corresponding location in the infill of the print.",
+                    "description": "The file location of an image of which the brightness values determine the minimal density at the corresponding location in the infill of the print. The image is scaled to fit the print. The top of the image is oriented toward the back of the printer. If the first image of a sequence is specified the image sequence will be stretched over the Z range of the object to serve as a voxel specification of the densities at each 3D location of the model.",
                     "type": "str",
                     "default_value": "",
                     "enabled": "infill_pattern == 'cross' or infill_pattern == 'cross_3d'",
